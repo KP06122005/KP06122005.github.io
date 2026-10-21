@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishna Prashanth Paulpandian · Digital VLSI Design</title>
+<meta name="description" content="Portfolio of Krishna Prashanth Paulpandian, ECE undergraduate at VIT specializing in Digital VLSI, RTL design, approximate computing and ASIC flow.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080c14;--panel:#0f1624;--line:#1f2b42;--tx:#e8edf7;--mu:#93a1ba;
+--diff:#4ade80;--poly:#ff6b6b;--m1:#5aa9ff;--m2:#c792ff;--via:#ffd166;--r:10px}
+[data-theme=light]{--bg:#f5f3ec;--panel:#fff;--line:#d9d5c7;--tx:#121a2b;--mu:#566078;
+--diff:#138a45;--poly:#d63c3c;--m1:#1c6fd1;--m2:#8a46d6;--via:#a87400}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.6 'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}.w{max-width:1040px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:2px solid var(--via);outline-offset:3px}
+header{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:4px;overflow-x:auto;padding:10px 22px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:7px;text-decoration:none;font-size:15px;color:var(--mu);white-space:nowrap}
+nav a:hover{color:var(--tx);background:var(--panel)}
+nav i{width:11px;height:11px;border-radius:2px;background:var(--c);display:block;opacity:.9}
+#th{margin-left:auto;background:var(--panel);border:1px solid var(--line);color:var(--tx);border-radius:7px;padding:6px 12px;font:inherit;font-size:15px;cursor:pointer}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#cv{position:absolute;inset:0;width:100%;height:100%;opacity:.75}
+.hero .w{position:relative;display:grid;grid-template-columns:1fr 230px;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+h1{font-size:clamp(40px,7vw,76px);line-height:1;font-weight:800;letter-spacing:-.03em}
+.role{margin-top:18px;font-size:clamp(18px,2.4vw,23px);color:var(--diff);font-weight:600}
+.sum{margin-top:16px;max-width:56ch;color:var(--mu)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.b{padding:11px 18px;border-radius:8px;border:1px solid var(--line);background:var(--panel);text-decoration:none;font-weight:600;font-size:16px}
+.b:hover{border-color:var(--m1)}.b.p{background:var(--via);color:#1a1300;border-color:var(--via)}
+.ph{width:230px;height:230px;border-radius:50%;object-fit:cover;border:3px solid var(--bg);outline:3px solid var(--diff);box-shadow:0 0 0 12px color-mix(in srgb,var(--diff) 14%,transparent)}
+.stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:34px}
+.stats b{display:block;font-size:34px;font-weight:800;line-height:1.1}.stats span{color:var(--mu);font-size:14px}
+section{padding:68px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:14px;margin-bottom:28px}
+h2::before{content:"";width:26px;height:26px;border-radius:4px;background:var(--c);background-image:repeating-linear-gradient(45deg,transparent 0 4px,rgba(0,0,0,.28) 4px 6px)}
+.g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--c,var(--m1));border-radius:var(--r);padding:22px}
+.card h3{font-size:20px;line-height:1.25;margin-bottom:4px}.card .d{color:var(--mu);font-size:14px;margin-bottom:10px}
+.card p{font-size:16px}.card .pub{margin-top:10px;color:var(--via);font-size:15px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font:400 12.5px 'JetBrains Mono',monospace;padding:3px 8px;border-radius:5px;border:1px solid var(--line);color:var(--mu)}
+.abt{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start}
+pre{background:#05080f;color:#cfd8ea;border:1px solid var(--line);border-radius:var(--r);padding:18px;font:13.5px/1.7 'JetBrains Mono',monospace;overflow-x:auto}
+.k{color:var(--m2)}.t{color:var(--m1)}.n{color:var(--via)}.c{color:#6c7a96}.s{color:var(--diff)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:26px;counter-reset:f}
+.flow span{counter-increment:f;padding:6px 12px;border-radius:6px;background:var(--panel);border:1px solid var(--line);font-size:14px}
+.flow span::before{content:counter(f)". ";color:var(--poly);font-weight:600}
+.sk{display:grid;gap:12px}.sk div{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.sk dt{font-weight:600;color:var(--m1)}.sk dd{margin:0}
+.tl{border-left:2px solid var(--line);padding-left:22px;margin-left:6px}
+.tl div{position:relative;margin-bottom:26px}.tl div::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:2px;background:var(--c,var(--diff))}
+.tl h3{font-size:19px}.tl small{color:var(--mu);font-size:14px;display:block}
+.cg{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.cg a{padding:18px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);text-decoration:none;word-break:break-word}
+.cg a:hover{border-color:var(--via)}.cg small{display:block;color:var(--mu);font-size:13px}
+footer{padding:30px 0;color:var(--mu);font-size:14px}
+@media(max-width:760px){.hero .w{grid-template-columns:1fr;padding-top:40px}.ph{width:150px;height:150px;order:-1}.abt{grid-template-columns:1fr}.sk div{grid-template-columns:1fr;gap:4px}section{padding:50px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><nav aria-label="Sections">
+<a href="#about" style="--c:var(--diff)"><i></i>About</a>
+<a href="#projects" style="--c:var(--poly)"><i></i>Projects</a>
+<a href="#research" style="--c:var(--m1)"><i></i>Research</a>
+<a href="#skills" style="--c:var(--m2)"><i></i>Skills</a>
+<a href="#journey" style="--c:var(--via)"><i></i>Journey</a>
+<a href="#contact" style="--c:var(--diff)"><i></i>Contact</a>
+<button id="th" aria-label="Toggle light or dark theme">Light</button></nav></header>
+
+<div class="hero"><canvas id="cv" aria-hidden="true"></canvas>
+<div class="w"><div>
+<h1>Krishna Prashanth Paulpandian</h1>
+<p class="role">Digital VLSI designer · RTL to GDSII</p>
+<p class="sum">ECE undergraduate at VIT working on approximate computing, processor design and hardware security. Currently taking an 8-bit processor through the full ASIC flow and building a RISC-V post-quantum cryptography accelerator.</p>
+<div class="btns"><a class="b p" href="assets/Krishna_Prashanth_Resume.pdf" download>Download resume</a><a class="b" href="#projects">See projects</a><a class="b" href="#contact">Get in touch</a></div>
+<div class="stats"><div><b>9.88</b><span>CGPA at VIT</span></div><div><b>2</b><span>papers published or accepted</span></div><div><b>5</b><span>hardware projects</span></div><div><b>1st</b><span>rank, 2023–24 and 2025–26</span></div></div>
+</div><img class="ph" src="assets/photo.jpg" alt="Portrait of Krishna Prashanth Paulpandian"></div></div>
+
+<section id="about" style="--c:var(--diff)"><div class="w"><h2>About</h2>
+<div class="abt"><div>
+<p>I'm a B.Tech student in Electronics and Communication Engineering at Vellore Institute of Technology, focused on digital IC design. My work centers on arithmetic circuits that trade a little accuracy for large savings in power and area, and on taking designs from Verilog all the way to layout.</p>
+<p style="margin-top:14px">I'm looking for digital IC design and verification roles and internships where I can work on RTL, synthesis and physical design.</p></div>
+<pre><span class="k">module</span> <span class="t">krishna</span> (
+  <span class="k">input</span>  <span class="k">wire</span> clk,
+  <span class="k">output</span> <span class="k">reg</span>  [<span class="n">7</span>:<span class="n">0</span>] focus
+);
+  <span class="c">// RTL → synthesis → P&amp;R → GDSII</span>
+  <span class="k">always</span> @(<span class="k">posedge</span> clk)
+    focus &lt;= <span class="s">"approx_arith"</span>;
+<span class="k">endmodule</span></pre></div></div></section>
+
+<section id="projects" style="--c:var(--poly)"><div class="w"><h2>Projects</h2>
+<div class="flow" aria-label="ASIC flow I am working through"><span>RTL</span><span>Synthesis</span><span>Floorplan</span><span>Placement</span><span>Clock tree</span><span>Routing</span><span>Signoff</span><span>GDSII</span></div>
+<div class="g" id="pj"></div></div></section>
+
+<section id="research" style="--c:var(--m1)"><div class="w"><h2>Research and publications</h2><div class="g" id="rs"></div></div></section>
+
+<section id="skills" style="--c:var(--m2)"><div class="w"><h2>Skills</h2>
+<dl class="sk">
+<div><dt>HDLs</dt><dd>Verilog HDL, SystemVerilog</dd></div>
+<div><dt>Programming</dt><dd>Java, Embedded C, Assembly, TCL, MATLAB</dd></div>
+<div><dt>EDA tools</dt><dd>Quartus Prime, ModelSim, Xilinx Vivado, Keil uVision, Cadence tools, Synopsys Design Compiler, Genus, Yosys, OpenSTA</dd></div>
+<div><dt>Core</dt><dd>RTL design, FPGA implementation, computer architecture, ASIC design flow, 8051 microcontroller</dd></div></dl></div></section>
+
+<section id="journey" style="--c:var(--via)"><div class="w"><h2>Journey</h2>
+<div class="abt"><div><h3 style="margin-bottom:18px">Education and experience</h3><div class="tl">
+<div style="--c:var(--diff)"><h3>B.Tech, Electronics and Communication Engineering</h3><small>Vellore Institute of Technology · 2023 – present · CGPA 9.88/10</small></div>
+<div style="--c:var(--m1)"><h3>Research Intern</h3><small>NIT Tiruchirappalli · May – Jun 2025</small><p>Worked under Dr. M. Bhaskar, HoD of ECE, on Digital VLSI. Built an FPGA-based approximate Sobel edge detector and evaluated image quality using PSNR.</p></div>
+<div style="--c:var(--poly)"><h3>Class X and XII</h3><small>Prince Srivari Senior Secondary School, Chennai · 2020 – 2023</small><p>Class X: 94.6%. Class XII: 95.6%.</p></div></div></div>
+<div><h3 style="margin-bottom:18px">Leadership, awards, certifications</h3><div class="tl">
+<div><h3>Executive Member, Student Council</h3><small>Office of Students Welfare, VIT · Aug 2026 – present</small></div>
+<div><h3>Programme Representative</h3><small>School of Electronics Engineering, VIT · Oct 2025 – present</small></div>
+<div style="--c:var(--m2)"><h3>Merit certificates for academic excellence</h3><small>1st rank 2023–24 · 2nd rank 2024–25 · 1st rank 2025–26</small></div>
+<div style="--c:var(--m1)"><h3>Value Added Course on RTL to GDSII</h3><small>VIT · Apr 2026</small></div>
+<div style="--c:var(--m1)"><h3>System Design through Verilog</h3><small>NPTEL, IIT Guwahati · Sep 2024</small></div></div></div></div></div></section>
+
+<section id="contact" style="--c:var(--diff)"><div class="w"><h2>Contact</h2>
+<div class="cg">
+<a href="mailto:krishnaprashanthpaulpandian@gmail.com"><small>Email</small>krishnaprashanthpaulpandian@gmail.com</a>
+<a href="tel:+919894567793"><small>Phone</small>+91 98945 67793</a>
+<a href="https://github.com/KP06122005" target="_blank" rel="noopener"><small>GitHub</small>KP06122005</a>
+<a href="https://www.linkedin.com/in/krishna-prashanth-paulpandian-b572362b1/" target="_blank" rel="noopener"><small>LinkedIn</small>Krishna Prashanth Paulpandian</a></div></div></section>
+<footer><div class="w">© <span id="yr"></span> Krishna Prashanth Paulpandian · Resume last updated 22 September 2026</div></footer>
+
+<script>
+const P=[
+["Hardware-efficient approximate Sobel edge detector","May – Jun 2025","Synthesizable Verilog Sobel edge detector for FPGA using an approximate unsigned multiplier, cutting power and area while keeping real-time edge detection.",["Verilog HDL","Vivado","FPGA","MATLAB"],"--m1"],
+["Error-compensated Mitchell-based logarithmic multiplier","Mar – Apr 2026","A logarithmic multiplier with error compensation, lower hardware overhead and better accuracy for Gaussian filtering.",["Verilog HDL","ModelSim","MATLAB","Design Compiler"],"--m2","Extended version submitted to IEEE Access, under peer review."],
+["PUF-based FPGA security for hardware identification","Apr – Jun 2026","A 32-ring-oscillator PUF in Verilog for FPGA authentication, with challenge-response logic evaluated in Vivado.",["Verilog HDL","Vivado","PUF","Hardware security"],"--poly"],
+["RTL-to-GDSII implementation of an 8-bit processor","Jul 2026 – present","8-bit processor in Verilog with ALU, register file and control unit. Now in ASIC implementation: synthesis, floorplanning, placement, clock tree synthesis, routing and signoff.",["Verilog HDL","Vivado","Genus","Yosys","OpenSTA"],"--diff"],
+["RISC-V post-quantum cryptography accelerator","Jul 2026 – present","A RISC-V-based hardware accelerator for post-quantum cryptographic algorithms, focused on efficient hardware, performance and secure processing.",["Verilog HDL","RISC-V"],"--via"]];
+const R=[
+["Area-efficient approximate multiplier with novel 4:2 compressors and error correction logic","Springer Journal · Dec 2025","An area-efficient approximate multiplier that uses novel 4:2 compressors and error correction logic to cut hardware overhead while improving accuracy.",["Approximate computing","Arithmetic circuits","FPGA"],"--m1"],
+["Edge AI real-time fault diagnostics for industrial motors using lightweight neural networks","NEleX-2026 · 2nd International Conference on Next Generation Electronics","An Edge AI framework for low-latency, real-time motor fault diagnosis that supports predictive maintenance.",["Edge AI","Neural networks","Embedded systems","Signal processing"],"--m2"]];
+const card=a=>`<article class="card" style="--c:var(${a[4]})"><h3>${a[0]}</h3><div class="d">${a[1]}</div><p>${a[2]}</p>${a[5]?`<p class="pub">${a[5]}</p>`:''}<div class="tags">${a[3].map(t=>`<span>${t}</span>`).join('')}</div></article>`;
+pj.innerHTML=P.map(card).join('');rs.innerHTML=R.map(card).join('');
+yr.textContent=new Date().getFullYear();
+const root=document.documentElement,tb=document.getElementById('th');
+tb.onclick=()=>{const l=root.dataset.theme==='dark';root.dataset.theme=l?'light':'dark';tb.textContent=l?'Dark':'Light'};
+/* layout-view routing animation */
+(()=>{const c=document.getElementById('cv'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+let W,H,G=26,A=[];const col=()=>['--diff','--poly','--m1','--m2','--via'].map(v=>getComputedStyle(root).getPropertyValue(v).trim());
+function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;A=[];const C=col();for(let i=0;i<Math.max(10,W/70);i++)A.push({x:Math.floor(Math.random()*W/G)*G,y:Math.floor(Math.random()*H/G)*G,d:Math.floor(Math.random()*4),k:i%5,l:0})}
+size();addEventListener('resize',size);const D=[[1,0],[0,1],[-1,0],[0,-1]];
+function f(){x.globalCompositeOperation='destination-out';x.fillStyle='rgba(0,0,0,.035)';x.fillRect(0,0,W,H);x.globalCompositeOperation='source-over';const C=col();
+for(const a of A){x.strokeStyle=C[a.k];x.lineWidth=2.5;x.beginPath();x.moveTo(a.x,a.y);a.x+=D[a.d][0]*2;a.y+=D[a.d][1]*2;x.lineTo(a.x,a.y);x.stroke();a.l+=2;
+if(a.l%G===0){if(Math.random()<.3)a.d=(a.d+(Math.random()<.5?1:3))%4;x.fillStyle=C[(a.k+1)%5];x.fillRect(a.x-3,a.y-3,6,6)}
+if(a.x<0||a.y<0||a.x>W||a.y>H){a.x=Math.floor(Math.random()*W/G)*G;a.y=Math.floor(Math.random()*H/G)*G}}
+requestAnimationFrame(f)}f()})();
+</script>
+</body></html>
